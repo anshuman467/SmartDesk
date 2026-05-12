@@ -1,0 +1,8 @@
+streamlit
+pandas
+openpyxl
+pydeck
+requests
+plotly
+markdown
+xhtml2pdf

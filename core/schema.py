@@ -1,0 +1,93 @@
+from typing import Dict, List
+
+
+STANDARD_FIELDS: Dict[str, List[str]] = {
+    "phone_number": ["phone", "mobile", "msisdn", "number", "contact", "mobile_no"],
+    "other_party_number": ["other_party", "called_number", "receiver", "callee", "b_party"],
+    "imei": ["imei", "device_id", "handset"],
+    "imsi": ["imsi", "subscriber_id"],
+    "source_ip": ["source_ip", "src_ip", "ip_source", "source_address"],
+    "destination_ip": ["destination_ip", "dest_ip", "dst_ip", "ip_destination", "remote_ip"],
+    "source_port": ["source_port", "src_port"],
+    "destination_port": ["destination_port", "dest_port", "dst_port", "port"],
+    "protocol": ["protocol", "proto"],
+    "domain": ["domain", "website", "host", "url", "platform"],
+    "service_provider": ["provider", "isp", "service_provider", "operator"],
+    "tower_id": ["tower_id", "cell_id", "tower", "cell_tower", "site_id"],
+    "tower_location": ["tower_location", "location", "area", "place", "address"],
+    "mcc": ["mcc", "mobile_country_code"],
+    "mnc": ["mnc", "mobile_network_code"],
+    "lac": ["lac", "location_area_code"],
+    "cellid": ["cellid", "cid", "eci", "tower_cell_id"],
+    "tac": ["tac", "tracking_area_code"],
+    "radio": ["radio", "network_type", "act", "rat"],
+    "date_time": ["date_time", "datetime", "timestamp", "event_time"],
+    "date": ["date", "record_date"],
+    "time": ["time", "record_time"],
+    "duration": ["duration", "call_duration"],
+    "bytes_used": ["bytes", "bytes_used", "data_usage", "usage"],
+    "call_type": ["call_type", "type_of_call"],
+    "tower_latitude": ["tower_latitude", "latitude", "lat", "tower_lat"],
+    "tower_longitude": ["tower_longitude", "longitude", "long", "lon", "tower_lon", "tower_long"],
+}
+
+
+RECORD_COLUMNS = [
+    "source_file",
+    "file_type",
+    "phone_number",
+    "other_party_number",
+    "imei",
+    "imsi",
+    "source_ip",
+    "destination_ip",
+    "source_port",
+    "destination_port",
+    "protocol",
+    "domain",
+    "service_provider",
+    "tower_id",
+    "tower_location",
+    "tower_latitude",
+    "tower_longitude",
+    "mcc",
+    "mnc",
+    "lac",
+    "cellid",
+    "tac",
+    "radio",
+    "approx_radius_meters",
+    "date_time",
+    "duration",
+    "bytes_used",
+    "call_type",
+    "service_name",
+]
+
+
+PORT_LOOKUP = {
+    21: "FTP",
+    25: "SMTP",
+    53: "DNS",
+    80: "HTTP",
+    110: "POP3",
+    123: "NTP",
+    143: "IMAP",
+    443: "HTTPS",
+    465: "SMTPS",
+    587: "Mail Submission",
+    993: "IMAPS",
+    995: "POP3S",
+    5228: "Google Services",
+    8080: "HTTP Alternate",
+}
+
+
+TOWER_COORDINATES = {
+    "TWR001": ("Connaught Place", 28.6315, 77.2167),
+    "TWR002": ("India Gate", 28.6129, 77.2295),
+    "TWR003": ("Karol Bagh", 28.6519, 77.1909),
+    "TWR004": ("Noida Sector 18", 28.5706, 77.3272),
+    "TWR005": ("Saket", 28.5245, 77.2066),
+    "TWR006": ("Gurugram Cyber Hub", 28.4947, 77.0888),
+}

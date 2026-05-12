@@ -1,0 +1,355 @@
+{
+  "case_meta": {
+    "case_no": "FIR/0147/2024",
+    "ps": "Rajouri Garden Police Station, West Delhi",
+    "ps_code": "DL-0147",
+    "district": "West Delhi",
+    "io_name": "SI Harpreet Singh",
+    "io_badge": "DL-4492",
+    "crime": "Kidnapping for Ransom",
+    "sections": "363, 364A, 120B IPC",
+    "incident_date": "2024-03-15",
+    "data_requested_by": "SI Harpreet Singh, Rajouri Garden PS",
+    "data_issued_by": "Nodal Officer, Airtel / Jio / Vi / BSNL",
+    "court_order_ref": "CMM/NW/2024/0312",
+    "data_period": "2024-03-13 to 2024-03-17"
+  },
+  "dataset_summary": {
+    "cdr_total_records": 82,
+    "cdr_fields": 78,
+    "ipdr_total_records": 36,
+    "ipdr_fields": 78,
+    "tower_dump_total_records": 176,
+    "tower_dump_fields": 71,
+    "towers_covered": 15,
+    "msisdns_in_dataset": 9,
+    "date_range": "2024-03-13 to 2024-03-17"
+  },
+  "msisdn_directory": {
+    "SUSPECT_PRIMARY": {
+      "msisdn": "9811045723",
+      "role": "SUSPECT_PRIMARY",
+      "name": "Rakesh Kumar",
+      "imei": "356789012345678",
+      "op": "Airtel",
+      "kyc": "FAKE"
+    },
+    "SUSPECT_BURNER1": {
+      "msisdn": "7011238456",
+      "role": "SUSPECT_BURNER1",
+      "name": "Suresh Yadav",
+      "imei": "357890123456789",
+      "op": "Jio",
+      "kyc": "FAKE"
+    },
+    "SUSPECT_BURNER2": {
+      "msisdn": "8800123947",
+      "role": "SUSPECT_BURNER2",
+      "name": "Mohan Lal",
+      "imei": "358901234567890",
+      "op": "BSNL",
+      "kyc": "FAKE"
+    },
+    "SUSPECT_ASSOCIATE": {
+      "msisdn": "9654012387",
+      "role": "SUSPECT_ASSOCIATE",
+      "name": "Dinesh Chauhan",
+      "imei": "352012345678901",
+      "op": "Vi",
+      "kyc": "GENUINE"
+    },
+    "SUSPECT_DRIVER": {
+      "msisdn": "9711234560",
+      "role": "SUSPECT_DRIVER",
+      "name": "Ramesh Prasad",
+      "imei": "354567890123456",
+      "op": "Jio",
+      "kyc": "GENUINE"
+    },
+    "RANSOM_NEGOTIATOR": {
+      "msisdn": "9899456012",
+      "role": "RANSOM_NEGOTIATOR",
+      "name": "NOT REGISTERED",
+      "imei": "353456789012345",
+      "op": "Jio",
+      "kyc": "FAKE \u2013 Aadhaar not seeded"
+    },
+    "VICTIM_PHONE": {
+      "msisdn": "9910456781",
+      "role": "VICTIM_PHONE",
+      "name": "Arjun Mehta",
+      "imei": "350123456789012",
+      "op": "Airtel",
+      "kyc": "GENUINE"
+    },
+    "VICTIM_FATHER": {
+      "msisdn": "9810001234",
+      "role": "VICTIM_FATHER",
+      "name": "Rajesh Mehta",
+      "imei": "351234567890123",
+      "op": "Airtel",
+      "kyc": "GENUINE"
+    },
+    "POLICE_IO": {
+      "msisdn": "9810044921",
+      "role": "POLICE_IO",
+      "name": "SI Harpreet Singh (IO)",
+      "imei": "359876543210987",
+      "op": "Airtel",
+      "kyc": "GENUINE"
+    }
+  },
+  "crime_timeline": [
+    {
+      "datetime": "2024-03-13 08:00",
+      "event": "Planning call \u2013 Suspect Primary to Associate (312 sec)",
+      "data_source": "CDR",
+      "towers": [
+        "DL-AIR-001",
+        "HR-VI-001"
+      ]
+    },
+    {
+      "datetime": "2024-03-14 00:00",
+      "event": "Final planning day \u2013 multiple calls & encrypted WA sessions",
+      "data_source": "CDR+IPDR",
+      "towers": [
+        "DL-AIR-001",
+        "DL-JIO-001",
+        "HR-VI-001"
+      ]
+    },
+    {
+      "datetime": "2024-03-15 08:00",
+      "event": "VICTIM last active call \u2013 Arjun Mehta to father (78 sec)",
+      "data_source": "CDR",
+      "towers": [
+        "DL-AIR-001"
+      ]
+    },
+    {
+      "datetime": "2024-03-15 08:05",
+      "event": "Suspects coordinate via calls + WhatsApp",
+      "data_source": "CDR+IPDR",
+      "towers": [
+        "DL-AIR-001",
+        "DL-JIO-001"
+      ]
+    },
+    {
+      "datetime": "2024-03-15 08:22",
+      "event": "VICTIM PHONE GOES SILENT \u2013 missed call from father not answered",
+      "data_source": "CDR",
+      "towers": [
+        "DL-AIR-001"
+      ]
+    },
+    {
+      "datetime": "2024-03-15 08:30",
+      "event": "Ransom negotiator SIM gets first SMS from Burner1",
+      "data_source": "CDR",
+      "towers": [
+        "DL-JIO-001",
+        "DL-JIO-003"
+      ]
+    },
+    {
+      "datetime": "2024-03-15 09:00",
+      "event": "Suspect Primary tower-hops toward Gurugram (AIR-001\u2192AIR-003\u2192HR-VI-001)",
+      "data_source": "CDR",
+      "towers": [
+        "DL-AIR-001",
+        "DL-AIR-003",
+        "HR-VI-001"
+      ]
+    },
+    {
+      "datetime": "2024-03-15 09:30",
+      "event": "Suspect Primary + Associate co-located at HR-VI-001 (Gurugram hideout)",
+      "data_source": "CDR+Tower Dump",
+      "towers": [
+        "HR-VI-001"
+      ]
+    },
+    {
+      "datetime": "2024-03-15 12:00",
+      "event": "FIRST RANSOM CALL \u2013 847 sec (14 min) to Rajesh Mehta from tower DL-JIO-003",
+      "data_source": "CDR",
+      "towers": [
+        "DL-JIO-003"
+      ]
+    },
+    {
+      "datetime": "2024-03-15 16:00",
+      "event": "Suspects on NH-48 Kherki Daula \u2013 all 3 on HR-VI-002",
+      "data_source": "CDR+Tower Dump",
+      "towers": [
+        "HR-VI-002"
+      ]
+    },
+    {
+      "datetime": "2024-03-15 20:00",
+      "event": "Suspects reach Manesar (HR-VI-003)",
+      "data_source": "CDR",
+      "towers": [
+        "HR-VI-003"
+      ]
+    },
+    {
+      "datetime": "2024-03-16 10:00",
+      "event": "SECOND RANSOM CALL \u2013 1247 sec (20 min) from DL-JIO-003",
+      "data_source": "CDR",
+      "towers": [
+        "DL-JIO-003"
+      ]
+    },
+    {
+      "datetime": "2024-03-17 09:00",
+      "event": "THIRD RANSOM CALL \u2013 312 sec from DL-JIO-004 (suspect mobile)",
+      "data_source": "CDR",
+      "towers": [
+        "DL-JIO-004"
+      ]
+    }
+  ],
+  "key_forensic_findings": [
+    {
+      "id": "F-01",
+      "priority": "CRITICAL",
+      "title": "IMEI cross-SIM linkage destroys burner anonymity",
+      "detail": "IMEI 357890123456789 is shared between SUSPECT_BURNER1 (7011238456/Jio) and SUSPECT_PRIMARY (9811045723/Airtel). Both SIMs used in same physical handset (Samsung Galaxy A54). This makes the burner SIM traceable back to the main suspect. Query: SELECT msisdn, imei FROM cdr WHERE imei='357890123456789' GROUP BY msisdn",
+      "data_sources": [
+        "CDR",
+        "CAF"
+      ]
+    },
+    {
+      "id": "F-02",
+      "priority": "CRITICAL",
+      "title": "Victim + Primary Suspect co-located at DL-AIR-001 during kidnapping window",
+      "detail": "Tower dump DL-AIR-001 (07:30\u201309:00) shows MSISDN 9910456781 (victim) and 9811045723 (suspect) both active. Victim silent after 08:22. Suspect continues active = physical co-location at crime scene.",
+      "data_sources": [
+        "Tower Dump",
+        "CDR"
+      ]
+    },
+    {
+      "id": "F-03",
+      "priority": "CRITICAL",
+      "title": "Ransom SIM (9899456012) linked to SUSPECT_BURNER1 via CDR",
+      "detail": "Within 14 minutes of each ransom call, SUSPECT_BURNER1 (7011238456) called RANSOM_NEGOTIATOR (9899456012). Pattern repeats on all 3 ransom call days. Indirect link: Primary \u2192 Burner1 \u2192 Ransom SIM \u2192 Victim Father.",
+      "data_sources": [
+        "CDR"
+      ]
+    },
+    {
+      "id": "F-04",
+      "priority": "HIGH",
+      "title": "Ransom SIM Google Maps session 4 minutes before each ransom call",
+      "detail": "IPDR shows RANSOM_NEGOTIATOR data session to maps.google.com (dst_ip: 142.250.195.142, port 443) approximately 3-4 minutes before each ransom call. Possible real-time location scouting or checking movement of IO team.",
+      "data_sources": [
+        "IPDR"
+      ]
+    },
+    {
+      "id": "F-05",
+      "priority": "HIGH",
+      "title": "Suspect Associate (Dinesh Chauhan) has genuine KYC \u2013 real address lead",
+      "detail": "MSISDN 9654012387 (Vi Haryana) has genuine Aadhaar seeded KYC. Address: House 7, Block B, Sheetla Mata Road, Gurugram \u2013 122001. Physical surveillance recommended. All other suspect SIMs use fake documents.",
+      "data_sources": [
+        "CAF",
+        "Tower Dump"
+      ]
+    },
+    {
+      "id": "F-06",
+      "priority": "HIGH",
+      "title": "IPDR WhatsApp large upload at NH-48 tower (HR-VI-002) = possible live location share",
+      "detail": "445,000 bytes uplink in 60-min WhatsApp session at HR-VI-002 (16:00 on Mar 15). Unusually high uplink for messaging = likely sending images/video or live location. Request WhatsApp LEA data for account linked to IP session.",
+      "data_sources": [
+        "IPDR"
+      ]
+    },
+    {
+      "id": "F-07",
+      "priority": "MEDIUM",
+      "title": "Suspect Driver (Ramesh Prasad) has genuine KYC \u2013 second real address lead",
+      "detail": "MSISDN 9711234560, Jio Delhi, genuine Aadhaar. Address: Jhuggi Cluster, R-Block, Uttam Nagar. Present at kidnapping origin tower and hideout tower. Second physical arrest target.",
+      "data_sources": [
+        "CAF",
+        "Tower Dump"
+      ]
+    },
+    {
+      "id": "F-08",
+      "priority": "MEDIUM",
+      "title": "Ransom SIM activated 5 days before crime = premeditated planning",
+      "detail": "MSISDN 9899456012 activated 2024-03-10 (5 days before kidnapping). Only used for ransom calls. Activation retailer: JIO-RET-DL-019234, North West Delhi \u2013 may have CCTV footage of buyer.",
+      "data_sources": [
+        "CAF"
+      ]
+    }
+  ],
+  "suggested_tool_test_queries": [
+    {
+      "qid": "Q-01",
+      "type": "IMEI Cross-SIM",
+      "query": "SELECT msisdn, imsi, imei, operator, activation_date FROM CAF WHERE imei = '357890123456789'",
+      "expected_result": "Returns 2 rows (Burner1 + Primary) \u2013 same IMEI, different operators"
+    },
+    {
+      "qid": "Q-02",
+      "type": "Tower Dump Intersection",
+      "query": "Find all MSISDNs present in BOTH dump DL-AIR-001 (07:30-09:00 Mar 15) AND HR-VI-001 (09:30-13:00 Mar 15)",
+      "expected_result": "Returns Suspect Primary + Suspect Driver \u2013 proves both were at crime scene and hideout"
+    },
+    {
+      "qid": "Q-03",
+      "type": "Tower Movement Trail",
+      "query": "SELECT msisdn, call_datetime, serving_lac, serving_ci, serving_bts_address FROM CDR WHERE msisdn='9811045723' AND call_date='2024-03-15' ORDER BY call_datetime",
+      "expected_result": "Shows tower hop: DL-AIR-001\u2192DL-AIR-002\u2192DL-AIR-003\u2192HR-VI-001\u2192HR-VI-002\u2192HR-VI-003"
+    },
+    {
+      "qid": "Q-04",
+      "type": "CDR-IPDR Correlation",
+      "query": "For MSISDN 9811045723 on 2024-03-15, list all CDR voice calls and IPDR data sessions, sorted by time \u2013 show gaps",
+      "expected_result": "Reveals WhatsApp sessions filling every gap between calls = encrypted messaging pattern"
+    },
+    {
+      "qid": "Q-05",
+      "type": "Common Caller Analysis",
+      "query": "Find MSISDNs that called BOTH 9811045723 (Primary) AND 9899456012 (Ransom) within any 30-minute window",
+      "expected_result": "Returns 7011238456 (Burner1) \u2013 the indirect link"
+    },
+    {
+      "qid": "Q-06",
+      "type": "Ransom Call Pattern",
+      "query": "From CDR: find all calls TO 9810001234 (victim father) from numbers NOT in his regular contact history, duration > 300 sec",
+      "expected_result": "Returns 3 ransom calls from 9899456012"
+    },
+    {
+      "qid": "Q-07",
+      "type": "IPDR App Pattern",
+      "query": "For RANSOM_NEGOTIATOR (9899456012): list all IPDR sessions sorted by time; calculate time delta to next CDR voice call",
+      "expected_result": "Google Maps session \u2192 3-4 min gap \u2192 ransom call. Repeats 3 times."
+    },
+    {
+      "qid": "Q-08",
+      "type": "Speed/Distance Check",
+      "query": "Calculate approximate speed from CDR tower timestamps: DL-AIR-003 (09:00) to HR-VI-001 (09:30). Tower distance ~21 km in 30 min",
+      "expected_result": "~42 km/h \u2013 consistent with Delhi traffic, vehicle movement confirmed"
+    },
+    {
+      "qid": "Q-09",
+      "type": "Fake KYC Flag",
+      "query": "SELECT msisdn, name, kyc_doc_type, kyc_status, activation_date FROM CAF WHERE kyc_status='FAKE'",
+      "expected_result": "Returns 4 suspect SIMs including ransom negotiator"
+    },
+    {
+      "qid": "Q-10",
+      "type": "Pre-Crime Frequency",
+      "query": "CDR call frequency between 9811045723 and 9654012387 in 7 days before crime vs 7 days before that",
+      "expected_result": "Sharp spike in last 7 days = unusual communication pattern, planning indicator"
+    }
+  ]
+}
