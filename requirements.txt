@@ -5,4 +5,4 @@ pydeck
 requests
 plotly
 markdown
-xhtml2pdf
+reportlab
